@@ -1,26 +1,23 @@
 class StaticPagesController < ApplicationController
-  before_action :page_title
+  before_action :page_title, except: [ :home ]
   
   def home
-    @title
   end
 
   def help
-    @title
   end
 
   def about
-    @title
   end
 
   def contact
-    @title
   end
   
   private
 
+  #I think because this is a before_action, it doesnt have to manually be called to each methods
   def page_title
-    @title = self.action_name.capitalize + " | Sample App"
+     @title = self.action_name.capitalize 
   end
 
 end
