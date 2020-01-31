@@ -10,6 +10,57 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <%= link_to "Sample App", root_path, class: "navbar-brand" %>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <li><%= link_to "Home", root_path, class: "nav-link" %></li>
+            </li>
+
+            <li class="nav-item">
+              <li><%= link_to "Help", static_pages_help_path,  class: "nav-link" %></li>
+            </li>
+
+              <li class="nav-item">
+                  <li><%= link_to "About", static_pages_about_path, class: "nav-link" %></li>
+            </li>
+
+              <li class="nav-item">
+                    <li><%= link_to "Contact", static_pages_contact_path, class: "nav-link" %></li>
+            </li>
+
+          </ul>
+
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+            <%= yield %>
+              <%# <div class= "row justify-content-center"> %>
+                  <button type="button" class="btn btn-primary btn-lg mt-2">Sign up now!</button>
+              <%# </div> %>
+      </div>
+    </main>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo",class:"img-fluid"), "https://rubyonrails.org/" %>
+<%= link_to image_tag("kitten.jpg", alt: "kitten") %>
+
+  <div class="fixed-bottom row">
+          <footer class= "mx-auto">
+              <p class = "small">
+                    <%= Time.now.year %> |
+                    <a href="https://github.com/lovemercybiz" class="text-dark">Love Mercy</a>
+              <p>
+          </footer>
+    </div>
+
   </body>
 </html>
