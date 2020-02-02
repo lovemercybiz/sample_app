@@ -4,7 +4,7 @@ module ApplicationHelper
     def default_title(page_title = '' )
         main_title = 'Sample App'
 
-        if page_title.nil?
+        if page_title.nil? || page_title.empty?
             main_title
             else
                 page_title + " | " + main_title
