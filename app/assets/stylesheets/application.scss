@@ -42,3 +42,18 @@ body {
 img {
   display: none;
 }
+
+#nav-menu {
+  font-weight: bold;
+}
+
+#footer {
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover{
+    font-weight: bold;
+  }
+}
